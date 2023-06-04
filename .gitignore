@@ -1,0 +1,4 @@
+.idea
+fastify-simple.iml
+.env
+node_modules
