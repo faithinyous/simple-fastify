@@ -5,7 +5,7 @@ const baseUrl = './' // Either absolute or relative path. If relative it's resol
 
 const paths = tsConfig.compilerOptions.paths
 for (const path in paths) {
-  paths[path][0] = paths[path][0].replace('src', 'dist').replace('.ts', '.js')
+  paths[path][0] = paths[path][0].replace('src', 'dist/src').replace('.ts', '.js')
 }
 tsConfigPaths.register({
   baseUrl,

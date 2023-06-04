@@ -53,11 +53,11 @@ class App{
         this.app.get('/version',async(req,res)=>{
             return res.send('1.0.0')
         })
-        this.app.register(User.userList,{ prefix: '/users' })
+        this.app.register(User.userList,{ prefix: '/user' })
 
     }
     public listen(){
-        this.app.listen({port:this.port},(err,address)=>{
+        this.app.listen({port:this.port ,host:'0.0.0.0'},(err,address)=>{
             if(err){
                 console.log(err);
             }
